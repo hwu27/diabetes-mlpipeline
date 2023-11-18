@@ -6,6 +6,7 @@
 # The target variable is whether or not the patient has diabetes
 # The dataset is available at https://www.kaggle.com/uciml/pima-indians-diabetes-database
 # The dataset is also available at https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv
+# Pipeline was inspired by https://www.kaggle.com/code/pouryaayria/a-complete-ml-pipeline-tutorial-acu-86#6.-Ensemble-Methods
 # Features many ML algorithms and ensemble methods for classification 
 # Features hyperparameter tuning using RandomizedSearchCV and GridSearchCV 
 # Features stacking ensemble method
