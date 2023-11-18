@@ -41,4 +41,5 @@ Features plotting of accuracies of each model
 Features plotting of error correlation between models
 
 Detailed notes are provided for each step of the ML Pipeline for learning purposes
-Final result of Roc_Auc: 0.808 (+/- 0.067) for the ensemble of models
+
+**Final result of Roc_Auc: 0.808 (+/- 0.067) for the ensemble of models**
