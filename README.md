@@ -59,7 +59,7 @@ print(df.head())
 
 This is what we get:
 
-![[Pasted image 20231207153742.png]]
+![Basic Data 2](/images/basic_data2.png)
 
 This seems weird. How does someone have 0 skin thickness and/or 0 Insulin? These are biologically impossible. If you do some research, it is most likely due to input errors and things of that nature.
 
@@ -73,7 +73,7 @@ df.hist()
 
 pyplot.show()
 ```
-![[Pasted image 20231207154320.png]]
+![Plot befire umputation and replacing zeros](/images/plot_before.png)
 
 We will definitely have to do something about the zeros for Glucose, BloodPressure, SkinThickness, Insulin, BMI
 
@@ -115,7 +115,7 @@ df_imputed.hist()
 pyplot.show()
 
 ```
-![[Pasted image 20231207160355.png]]
+![After MICE and replacing zeros](/images/plot_change.png)
 
 That's a lot better. However, there seem to still be some outliers in the data such as those in the DiabetesPedigreeFunction.
 
@@ -147,7 +147,7 @@ filtered_df.hist()
 pyplot.show()
 ```
 
-![[Pasted image 20231208224615.png]]
+![Plot after IQR](/images/plot_final.png)
 
 You can play around the values when doing the IQR. You do not want to remove too much data, but outliers can skew your prediction as well.
 
@@ -187,7 +187,7 @@ X_train, y_train = pipeline.fit_resample(X_train, y_train)
 print(pd.Series(y_train).value_counts())
 ```
 
-![[Pasted image 20231217182204.png]]
+![Smote balanced](/images/smote.png)
 
 Finally, let us use minmax scalar in order to normalize the features
 
@@ -358,7 +358,7 @@ def ApplyRandomizedSearch(models, param_dist, X_train, y_train, n_iter=100, cv=s
     return best_params, best_scores
 ```
 
-![[Pasted image 20231217183818.png]]
+![Best parameters](/images/best_params.png)
 Note, the scores here are from the cross-validation scores averaged across the folds. The **RandomizedSearchCV** allows us to get parameters that are better generalized throughout the WHOLE dataset, not just the test dataset.
 
 Lets instantiate the models based off the best hyperparameters from the validation. 
@@ -414,7 +414,7 @@ scores = CVScoreModel(best_param_models, X_train, y_train, scoring_metrics=scori
 print(scores)
 ```
 
-![[Pasted image 20231218184026.png]]
+![Cross-validation scores for all models](/images/cv_score.png)
 
 Not bad.
 
@@ -436,7 +436,7 @@ average_scores = {metric: np.mean(scores[f'test_{metric}']) for metric in scorin
 for metric, avg_score in average_scores.items():
     print(f"Average {metric}: {avg_score:.4f}")
 ```
-![[Pasted image 20231217185502.png]]
+![Ensemble with all the models](/images/pre_ensemble.png)
 Seems to be worse in terms of accuracy, lets see how the models correlate to each other
 
 ```
@@ -468,7 +468,7 @@ pyplot.show()
 
 Create map to check correlation between models:
 
-![[Pasted image 20231218192119.png]]
+![Heat map for correlation between models](/images/heat_map.png)
 
 Here's the part where you play around with it. While you cam do some better tuning, I just manually tested different values. I found that there was a low correlation between SVM and LR. However, it does introduce a bit overfitting due to the complexity of SVM. If you notice, ada seems to have decently low correlations in terms of the other two as well. Lastly, CAT seems to do pretty well by itself, let's see if we can add it to the ensemble to help with the robustness.
 
@@ -490,7 +490,7 @@ for metric, avg_score in average_scores.items():
     print(f"Average {metric}: {avg_score:.4f}")
 ```
 
-![[Pasted image 20231218200059.png]]
+![Final Ensemble](/images/finaL_cv_score.png)
 
 An accuracy of **~88%** and a roc_auc score of **~94%**
 
