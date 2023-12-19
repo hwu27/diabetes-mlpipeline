@@ -1,5 +1,7 @@
 Note: In this tutorial, we will be using the Pima Indians Diabetes Database
 https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database/data
+Check the bottom for the acknowledgments
+
 ### Step 1: Research
 
 There is often lots of information about common databases: best imputation methods, good models, etc.  If you are planning to really understand a database, do some research first.
@@ -490,3 +492,13 @@ for metric, avg_score in average_scores.items():
 
 An accuracy of **~88%** and a roc_auc score of **~94%**
 
+## Acknowledgments
+
+1. Buczak, Philip et al. “Analyzing the Effect of Imputation on Classification Performance under 
+		MCAR and MAR Missing Mechanisms.” _Entropy (Basel, Switzerland)_ vol. 25,3 521. 17 Mar. 2023, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10048089/
+
+2. Ortner, Alex. "Top 10 Binary Classification Algorithms a Beginner’s Guide." _Towards Data Science_, 
+		28 May 2020, towardsdatascience.com/top-10-binary-classification-algorithms-a-beginners-guide-feeacbd7a3e2.
+
+3. Pir. "A Complete ML Pipeline Tutorial: ACU 86." _Kaggle_, 2017, 
+		[www.kaggle.com/code/pouryaayria/a-complete-ml-pipeline-tutorial-acu-86#Define-Problem](http://www.kaggle.com/code/pouryaayria/a-complete-ml-pipeline-tutorial-acu-86#Define-Problem)
