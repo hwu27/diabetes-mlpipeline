@@ -47,7 +47,7 @@ print(df.shape)
 print(df.info())
 ```
 
-![[Pasted image 20231217181252.png]]
+![[images/Pasted image 20231217181252.png]]
 
 While it may be obvious, this confirms it as a binary classification problem with 8 features and 1 target.
 
