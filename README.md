@@ -437,6 +437,7 @@ for metric, avg_score in average_scores.items():
     print(f"Average {metric}: {avg_score:.4f}")
 ```
 ![Ensemble with all the models](/images/pre_ensemble.png)
+
 Seems to be worse in terms of accuracy, lets see how the models correlate to each other
 
 ```
