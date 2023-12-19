@@ -1,5 +1,6 @@
 """
 Complete Machine Learning Pipeline for the Pima Indians Diabetes Dataset
+Check Acknowledments in readME.md for sources
 """
 
 import pandas as pd
