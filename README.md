@@ -1,5 +1,7 @@
 Note: In this tutorial, we will be using the Pima Indians Diabetes Database
+
 https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database/data
+
 Check the bottom for the acknowledgments
 
 ### Step 1: Research
