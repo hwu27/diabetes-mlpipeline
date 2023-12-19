@@ -491,7 +491,7 @@ for metric, avg_score in average_scores.items():
     print(f"Average {metric}: {avg_score:.4f}")
 ```
 
-![Final Ensemble](/images/finaL_cv_score.png)
+![Final Ensemble](/images/final_cv_score.png)
 
 An accuracy of **~88%** and a roc_auc score of **~94%**
 
